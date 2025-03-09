@@ -1,18 +1,56 @@
-# clipboad_image
+# ClipboadImage
 
-A new Flutter plugin project.
+A Flutter plugin to copy and retrieve images from the clipboard.
 
-## Getting Started
+## Features
+- Retrieve an image from the clipboard
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Add `clipboad_image` to your `pubspec.yaml`:
 
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` in this directory.
-You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/to/pubspec-plugin-platforms.
+```yaml
+dependencies:
+  clipboad_image:
+    path: clipboad_image
+```
+
+Run:
+```sh
+flutter pub get
+```
+
+## Usage
+
+### Import the package
+```dart
+import 'package:clipboad_image/clipboad_image.dart';
+```
+
+### Get an image from the clipboard
+Use `await ClipboadImage.getImage()` to retrieve an image. If the result is `null`, the clipboard does not contain an image.
+
+```dart
+Uint8List? imageData = await ClipboadImage.getImage();
+if (imageData != null) {
+  print("Image retrieved from clipboard!");
+} else {
+  print("No image found in clipboard.");
+}
+```
+
+### Copy an image from a browser (URL) to the clipboard
+```dart
+await ClipboadImage.copyImageFromUrl('https://example.com/sample-image.jpg');
+print("Image copied to clipboard");
+```
+
+## Platform Support
+
+| Platform | Support |
+|----------|---------|
+| Android  | ✅ Yes |
+| iOS      | ✅ Yes |
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
