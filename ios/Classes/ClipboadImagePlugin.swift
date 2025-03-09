@@ -11,7 +11,7 @@ public class ClipboadImagePlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
     case "getImage":
-      self?.getClipboardImage(result: result)
+      self.getClipboardImage(result: result)
     default:
       result(FlutterMethodNotImplemented)
     }
