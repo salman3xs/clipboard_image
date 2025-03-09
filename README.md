@@ -9,11 +9,11 @@ A Flutter plugin to copy and retrieve images from the clipboard.
 
 - IOS
 
-![Clipboard Image IOS Demo](assets/ios_demo.gif)
+![Clipboard Image IOS Demo](https://raw.githubusercontent.com/salman3xs/clipboard_image/main/assets/ios_demo.gif)
 
 - Android
 
-![Clipboard Image Android Demo](assets/android_demo.gif)
+![Clipboard Image Android Demo](https://raw.githubusercontent.com/salman3xs/clipboard_image/main/assets/android_demo.gif)
 
 ## Installation
 
