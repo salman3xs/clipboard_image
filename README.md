@@ -49,11 +49,6 @@ if (imageData != null) {
 }
 ```
 
-### Copy an image from a browser (URL) to the clipboard
-```dart
-await ClipboadImage.copyImageFromUrl('https://example.com/sample-image.jpg');
-print("Image copied to clipboard");
-```
 
 ## Platform Support
 
