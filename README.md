@@ -5,6 +5,13 @@ A Flutter plugin to copy and retrieve images from the clipboard.
 ## Features
 - Retrieve an image from the clipboard
 
+## Demo
+
+- IOS
+
+![Clipboard Image IOS Demo](assets/ios_demo.gif)
+![Clipboard Image Android Demo](assets/android_demo.gif)
+
 ## Installation
 
 Add `clipboad_image` to your `pubspec.yaml`:

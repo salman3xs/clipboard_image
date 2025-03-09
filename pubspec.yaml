@@ -2,7 +2,7 @@ name: clipboad_image
 description: "A Flutter plugin to get image from clipboard."
 version: 0.0.1
 homepage:
-
+repository: https://github.com/salman3xs/clipboard_image
 license: MIT
 
 environment:
