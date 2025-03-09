@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:clipboad_image/clipboad_image.dart';
 import 'package:clipboad_image/clipboad_image_platform_interface.dart';
@@ -9,7 +10,7 @@ class MockClipboadImagePlatform
     implements ClipboadImagePlatform {
 
   @override
-  Future<String?> getImage() => Future.value('42');
+  Future<Uint8List?> getImage() => Future.value(Uint8List(42));
 }
 
 void main() {
@@ -20,10 +21,9 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    ClipboadImage clipboadImagePlugin = ClipboadImage();
     MockClipboadImagePlatform fakePlatform = MockClipboadImagePlatform();
     ClipboadImagePlatform.instance = fakePlatform;
 
-    expect(await clipboadImagePlugin.getPlatformVersion(), '42');
+    expect(await ClipboadImage.getImage(), Uint8List(42));
   });
 }
